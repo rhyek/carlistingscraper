@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    // BEGIN allow dynamic imports
+    // https://github.com/microsoft/TypeScript/issues/43329#issuecomment-1276000768
+    "moduleResolution": "node16",
+    // https://github.com/NodeScriptLang/core/pull/3/files#diff-0b280a445be167f54cd916c0718c952b8e0d4ca9621903d05eec25efd4c6ed6dR14
+    "removeComments": false,
+    // END allow dynamic imports
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/scraper": ["libs/scraper/src"],
+      "@app/scraper/*": ["libs/scraper/src/*"]
+    }
+  }
+}
